@@ -4,20 +4,22 @@
     <meta charset="UTF-8">
     <title>Mohammad_Souti</title>
 </head>
-<body>
+<body style="background-color:cyan;">
   <form action="#" method="post">
 
-    <label for="day">لطفا روز مورد نظر را وارد کنید:</label>
+    <label for="day">Please enter the desired day : </label>
     <input type="text" name="day">
-    <input type="submit" value="submit" name="submit">
+    <input type="submit" value="submit" name="submit" id="day">
 
   </form>
+  <hr>
+  <br>
 
 <?php
 
 function check_even_odd($day) {
-  $odd_days = ['یک شنبه', 'سه شنبه', 'پنج شنبه'];
-  $even_days = ['شنبه', 'دوشنبه', 'چهار شنبه', 'جمعه'];
+  $odd_days = ['sunday', 'tuesday', 'thursday'];
+  $even_days = ['saturday', 'monday', 'wednesday', 'friday'];
   $day = trim($day);
 
   if (in_array($day, $odd_days)) {
@@ -36,7 +38,7 @@ if (isset($_POST['submit'])) {
 
   $result = check_even_odd($day);
 
-  echo $result;
+  echo "Your desired day is an $result day.";
 }
     
 
