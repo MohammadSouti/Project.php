@@ -21,11 +21,11 @@ function check_even_odd($day) {
   $day = trim($day);
 
   if (in_array($day, $odd_days)) {
-    return 'فرد';
+    return 'odd';
   } else if  (in_array($day, $even_days)) {
-    return 'زوج';
+    return 'even';
   } else {
-    return 'روز معتبر نیست';
+    return 'invalid day';
   }
     
 }
